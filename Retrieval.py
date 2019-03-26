@@ -48,13 +48,10 @@ extractor.set_model(DEPLOY_IMG, WEIGHTS, mean_file)
 img_feats, img_labels = extractor.get_feat(IMG_DB, IMG_LST)
 
 #retrieval
-if type(img_labels) is tuple:
-  mAP = []
-  for l in range(ret_level+1):
-    ret_.reg(skt_feats, skt_labels[l], img_feats, img_labels[l])
-    mAP.append(ret_.compute_mAP())
-else:
-  ret_.reg(skt_feats, skt_labels, img_feats, img_labels)
-  mAP = ret_.compute_mAP()
+mAP = []
+for l in range(2):
+  ret_.reg(skt_feats, skt_labels[l], img_feats, img_labels[l])
+  mAP.append(ret_.compute_mAP())
+
 print('mAP (class-level, midgrain-level)= {}'.format(mAP))
 print('Done')
