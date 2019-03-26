@@ -1,4 +1,4 @@
-# Triplet Loss SBIR
+# MidGrain SBIR
 This repo contains code for the ACCV 2018 paper "[Deep Manifold Alignment for Mid-grain Sketch based Image Retrieval](https://cvssp.org/data/Flickr25K/ACCV18_files/ACCV_Sketch_2018.pdf)" 
 
 ## Pre-trained model and the MidGrain65c dataset
